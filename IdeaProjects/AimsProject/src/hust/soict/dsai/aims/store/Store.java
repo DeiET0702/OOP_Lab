@@ -1,22 +1,15 @@
+import hust.soict.dsai.aims.media.Media;
+
 import java.util.ArrayList;
 public class Store {
-    private ArrayList<DigitalVideoDisc> itemsInStore;
+    private ArrayList<Media> itemsInStore =  new ArrayList<>();
 
-    public Store() {
-        itemsInStore = new ArrayList<>();
+    public void addMedia(Media media) {
+        itemsInStore.add(media);
     }
 
-    public void addDVD(DigitalVideoDisc dvd) {
-        itemsInStore.add(dvd);
+    public void removeMedia(Media media) {
+        itemsInStore.remove(media);
     }
 
-    public void removeDVD(DigitalVideoDisc dvd) {
-        itemsInStore.remove(dvd);
-    }
-
-    public void printItemsInStore() {
-        for (DigitalVideoDisc dvd : itemsInStore) {
-            System.out.println(dvd);
-        }
-    }
 }
